@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<title>TP's Brainwallet</title>
+		<style>
+			body {
+				min-width: 500px;
+				overflow-x: hidden;
+			}
+			table
+			{
+				text-align:center
+			}
+			div.visible {display:inline;}
+			div.hidden {display:none;}
+			p.hidden {display:none;}
+		</style>
+		<script src="popup.js"></script>
+	</head>
+	<body>
+		<div align="center"><a href= "bitcoin:1TPiDevCuXc1aTLJYw3E9HVuhWnkWGJoK?amount=0.1&label=TP's BrainPay donation">1TPiDevCuXc1aTLJYw3E9HVuhWnkWGJoK</a></div>
+		<p class="hidden" align="center" id="notice" style="color:red;">Notice</p>
+		<p class="hidden" align="center" id="txid" style="color:green;">TXID</p>
+		<div align="center" id="firstDiv" class="visible">
+			<p align="center">Send money to:</p>
+			<table id="BitcoinAddresses">
+				<tr><td>To Address</td><td>Amount (in mBTC)</td></tr>
+				<tr><td><input type="text" id="address0" name="address" size=35 value=""></input></td><td><input type="text" id="amount0" name="amount" size=5 value="0.0"></input></td></tr>
+			</table>
+			<p align="center">Miner fee: <input type="text" id="fee" size=3 value="0.5"></input>mBTC</p>
+			<p align="center">Extension developer donation: <input type="text" id="donation" size=3 value="0.5"></input>mBTC</p>
+			<p align="center">Brainwallet passphrase: <input type="password" id="passphrase" value="" size=70></input></p>
+			<p align="center">Compressed<input type="checkbox" id="compressed" value="compressed" checked></input></p>
+			<p align="center"><button id="newAddress">+Address</button>
+			<button id="scour">Find Addresses on the current page</button></p>
+			<p align="center"><button id="prepare">Prepare transaction</button></p>
+		</div>
+		<div align="center" id="secondDiv" class="hidden">
+			<table id="BitcoinAddresses2">
+				<tr><td>To Address</td><td>Amount (in mBTC)</td></tr>
+			</table>
+			<p><textarea id= "json" rows="4" cols="50" readonly>JSON transaction</textarea></p>
+			<p><textarea id= "raw" rows="4" cols="50" readonly>Raw transaction</textarea></p>
+			<p align="center"><button id="send">Send</button></p>
+			<p align="center"><button id="cancel">Cancel</button></p>
+		</div>
+	</body>
+<script src="bitcoinjs-min.js"></script>
+<script src="BitcoinAddress.js"></script>
+<script src="MyMath.js"></script>
+<script src="tx.js"></script>
+<script src="Brainwallet.js"></script>
+</html>
+

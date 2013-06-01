@@ -1,0 +1,26 @@
+<html>
+<head><title>TP's BrainPay</title></head>
+
+<body>
+	<p align="center">This extension can keep track of your balance for your convenience.</br>
+	You can either input your brainwallet passphrase (it will not be saved, we will just ),</br>
+	or simply input the final address below.</p>
+	<p align="center"><input type="text" id="passphrase" size=60></input></p>
+	<p align="center">Compressed <input type="checkbox" id="compressed" value="compressed" checked="true"></input></p>
+	<div align="center" id="status"></div>
+	<p align="center"><button id="save">Save</button></p>
+	
+	
+	<p align="center">Please input the address you are interested in.</p>
+	<p align="center"><input id="address" size=40></input></p>
+	<div align="center" id="status2"></div>
+	<p align="center"><button id="save2">Save</button></p>
+</body>
+
+<script src="bitcoinjs-min.js"></script>
+<script src="BitcoinAddress.js"></script>
+<script src="MyMath.js"></script>
+<script src="options.js"></script>
+<script src="Brainwallet.js"></script>
+
+</html>
